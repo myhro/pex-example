@@ -1,5 +1,7 @@
+BINARY = example.pex
+
 build:
-	pex . -c main.py -o example.pex
+	pex . --disable-cache -r requirements.txt -c main.py -o $(BINARY)
 
 clean:
-	rm -rf *.egg-info/
+	rm -rf *.egg-info/ $(BINARY)
