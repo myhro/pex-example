@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
-import requests
+from cli import main
 
-print(requests.get('https://myhro.info/ip').text)
+if __name__ == '__main__':
+    main()
